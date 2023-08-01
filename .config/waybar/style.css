@@ -1,0 +1,97 @@
+* {
+  padding: 3px 5px;
+  font-weight: bold;
+}
+
+#waybar {
+  background: transparent;
+}
+
+#workspaces,
+#memory,
+#pulseaudio,
+#clock,
+#bluetooth,
+#network,
+#battery,
+#custom-current-media {
+  border: 1px solid #242738;
+  background-color: #1a1b26;
+  opacity: 0.9;
+}
+
+#workspaces,
+#memory,
+#pulseaudio,
+#clock,
+#battery,
+#custom-current-media {
+  border-radius: 10px;
+}
+
+#workspaces {
+  margin-right: 15px;
+}
+
+#workspaces button.active {
+  color: #d7a866;
+}
+
+#memory {
+  margin-right: 15px;
+  padding: 0px 15px;
+  color: #e0af68;
+}
+
+#pulseaudio {
+  margin-right: 15px;
+  padding: 0 15px 0 15px;
+  color: #7dcfff;
+}
+
+#clock {
+  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 17px;
+  font-size: 16px;
+  color: #b393ed;
+}
+
+#bluetooth {
+  padding: 0 10px 0 15px;
+  color: #779ef1;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+}
+
+#network {
+  margin-right: 15px;
+  padding-right: 10px;
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+}
+
+#network.wifi big {
+  margin-right: 10px;
+}
+
+#battery {
+  padding: 0 15px 0 15px;
+  color: #97c567;
+}
+
+#battery.charging {
+  color: #7dcfff;
+}
+
+#battery.warning:not(.charging) {
+  color: #d7a866;
+}
+
+#battery.critical:not(.charging) {
+  color: #ec7189;
+}
+
+#custom-current-media {
+  padding: 0 15px;
+}

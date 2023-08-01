@@ -1,0 +1,99 @@
+{
+  "layer": "top",
+  "margin-top": 5,
+  "margin-left": 3,
+  "margin-right": 3,
+  "modules-left": [
+    "wlr/workspaces",
+    "memory",
+    "pulseaudio",
+    "custom/previous-song",
+    "custom/toggle-song",
+    "custom/next-song"
+  ],
+  "modules-center": ["custom/current-media"],
+  "modules-right": ["clock", "bluetooth", "network", "battery"],
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "tooltip": true,
+    "all-outputs": true,
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九"
+    },
+    "on-click": "activate"
+  },
+  "memory": {
+    "interval": 20,
+    "format": "{used}GiB  <big>󰍛</big>"
+  },
+  "custom/current-media": {
+    "format": "<span rise='+1pt'>{icon}</span>   {}",
+    "return-type": "json",
+    "max-length": 30,
+    "format-icons": {
+      "firefox": "󰈹",
+      "spotify": "󰓇",
+      "rhythmbox": "󰎆"
+    },
+    "exec": "~/.config/waybar/scripts/get-media.sh",
+    "tooltip": true,
+    "on-click": "exec playerctl play-pause"
+  },
+  "pulseaudio": {
+    "format": "{volume}%  {icon}",
+    "format-bluetooth": "{volume}%  {icon}",
+    "format-muted": "Mute  󰖁",
+    "format-icons": {
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      "headphones": "",
+      "handsfree": "󱠰",
+      "headset": "󰹆",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1
+  },
+  "clock": {
+    "tooltip": false,
+    "format": "{:%H:%M}  <big></big>",
+    "on-click": "gnome-calendar"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "interval": 2,
+    "format": "{capacity}%  <big>{icon}</big>",
+    "format-charging": "{capacity}%  <big>󰂄</big>",
+    "format-plugged": "{capacity}%  ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+  "bluetooth": {
+    "format": "{icon}",
+    "format-on": "<big></big>",
+    "format-off": "<big>󰂲</big>",
+    "format-disabled": "<big>󰂲</big>",
+    "format-connected": "<big>󰂱</big>"
+  },
+  "network": {
+    "interval": 5,
+    "format-wifi": "<big></big>     {essid}",
+    "format-ethernet": "<big>󰈀</big>     {ipaddr}/{cidr}",
+    "format-disconnected": "<big>󱚵</big>    Disconnected",
+    "format-disabled": "<big>󰖪</big>   ",
+    "tooltip": false,
+    "max-length": 20
+  }
+}

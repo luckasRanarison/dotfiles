@@ -1,0 +1,122 @@
+configuration {
+	modi:                        "drun,run";
+    show-icons:                  false;
+    display-drun:                "󰘔";
+    display-run:                 "󰲌";
+    display-filebrowser:         "󰥨";
+	drun-display-format:         "{name}";
+}
+
+* {
+    font:                        "DejaVu 10.5";
+    
+    background:                  #1A1B26;
+    foreground:                  #C0CAF5;
+    border:                      #242738;
+    selected:                    #51A7ED;
+    active:                      #97c567;
+    urgent:                      #e0af68;
+}
+
+window {
+    width:                       525px;
+    padding:                     0px;
+    border:                      0px solid;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+mainbox {
+    spacing:                     10px;
+    padding:                     30px;
+    border:                      1px solid;
+    border-radius:               10px;
+    border-color:                @border;
+    children:                    [ "inputbar", "listview" ];
+}
+
+inputbar {
+    margin:                      0 0 10px 0;
+    spacing:                     10px;
+    border:                      0px;
+    text-color:                  @foreground;
+    children:                    [ "textbox-prompt-colon", "entry", "mode-switcher" ];
+}
+
+textbox-prompt-colon {
+    padding:                     8px 5px;
+    str:                         "󱦞";
+}
+
+entry {
+    padding:                     5px 0px;
+    cursor:                      text;
+    placeholder:                 "Type to search...";
+    placeholder-color:           #7B809F;
+}
+
+listview {
+    columns:                     1;
+    lines:                       7;
+    scrollbar:                   false;
+    spacing:                     5px;
+    border:                      0px;
+    text-color:                  @foreground;
+    cursor:                      default;
+}
+
+element {
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     8px 15px;
+    border:                      0px;
+    border-radius:               8px;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            transparent;
+}
+
+element normal.active {
+    background-color:            @active;
+}
+
+element normal.urgent {
+    background-color:            @urgent;
+}
+   
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+
+element alternate.normal {
+    background-color:            transparent;
+}
+   
+element alternate.active {
+    background-color:            transparent;
+}
+    
+element alternate.urgent {
+    background-color:            transparent;
+}
+
+mode-switcher{
+    spacing:                     10px;
+    text-color:                  @foreground;
+}
+
+button {
+    padding:                     5px 17px 5px 14px;
+    border-radius:               8px;
+    border-color:                @border;
+    cursor:                      pointer;
+}
+   
+button selected {
+    background-color:            @selected;
+    text-color:                  @background;
+}
