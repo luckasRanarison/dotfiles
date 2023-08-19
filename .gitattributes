@@ -1,1 +1,2 @@
-/.p10k.zsh linguist-generated=true
+.p10k.zsh linguist-vendored
+.config/neofetch/* linguist-vendored
