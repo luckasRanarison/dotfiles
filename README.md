@@ -9,9 +9,11 @@ This repository contains my linux dotfiles, you can find my neovim dotfiles [her
 ![preview](.github/preview.png)
 
 ## Contents
+
 - hyprland
 - zsh
 - tmux
 - waybar
 - rofi
 - dunst
+- kitty
