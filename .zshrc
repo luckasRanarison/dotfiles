@@ -35,6 +35,7 @@ plugins=(
   fzf-tab
   git
   npm
+  rust
   sudo
   tmux
   zsh-syntax-highlighting
@@ -69,5 +70,14 @@ alias wifils="nmcli device wifi list"
 alias wifistatus="nmcli radio wifi"
 alias wificonnect="nmcli device wifi connect"
 
+alias clippy="cargo clippy"
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH=$PATH:/home/luckas/.spicetify
+
+# bun completions
+[ -s "/home/luckas/.bun/_bun" ] && source "/home/luckas/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

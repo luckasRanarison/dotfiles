@@ -4,7 +4,7 @@ set -g status-bg "#1a1b26"
 set -g message-style bg="#1a1b26"
 
 set -g status-left-length 45
-set -g status-left "#[fg=#7aa2f7] Tmux  #[fg=#fb9c63,nobold] Session   #[bold][#S]  "
+set -g status-left "#[fg=#7aa2f7] Tmux  #[fg=#fb9c63,nobold] Session   #[bold]#S  "
 
 set -g pane-border-style fg="#414868"
 set -g pane-active-border-style fg="#7aa2f7"
